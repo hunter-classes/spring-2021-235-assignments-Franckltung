@@ -45,11 +45,12 @@ int fib_iter(int n) {
 	// Zeroth Fibonacci number doesn't exist
 	if (n < 1) {
 		std::cout << "Error; \"" << n << "\" is out of range.\n";
+		return 0;
 	}
 	// Store the previous number and add it to the current one to create the new one
 	int previous = 0;
 	int current = 1;
-	for (int i = 0; i < n; i++) {
+	for (int i = 1; i < n; i++) {
 		int newPrevious = current;
 		current += previous;
 		previous = newPrevious;
